@@ -4,7 +4,7 @@ def main():
     print("Random Number Guessing Game")
 
     while True:
-        print("1.) Celsius to Farenheit")
+        print("1.) Guess a number from 1 - 100")
         print("2.) Exit")
 
         c = False
@@ -12,7 +12,7 @@ def main():
         
         try:
             if choice == '2':
-                print("Exiting converter")
+                print("Exiting")
                 break
             if choice not in ['1', '2']:
                 print("Invalid Input")
@@ -20,7 +20,6 @@ def main():
 
             if choice == '1':
                 num = random.randint(1,100)
-                print(f"{num}")
                 while True:
                     choice2 = int(input("Pick a number from 1 - 100 "))
                     if choice2 == num:
