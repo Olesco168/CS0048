@@ -30,6 +30,14 @@ def main():
                         print(f"{i}. {task}")
                     
                     try:
+                        remove=int(input("\nEnter the task you want to remove: "))
+                        if 1 <= remove <= len(tasks):
+                            removedtask = tasks.pop(remove - 1)
+                            print(f"Task {removedtask} removed.")
+                        else:
+                            print("Invalid number")
+                    except ValueError:
+                        print("Enter a valid number")
 
             elif choice == '3':
                 
