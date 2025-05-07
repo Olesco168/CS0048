@@ -19,16 +19,19 @@ def main():
                 continue
 
             if choice == '1':
+                c = 0
                 num = random.randint(1,100)
                 while True:
                     choice2 = int(input("Pick a number from 1 - 100 "))
                     if choice2 == num:
-                        print(f"\n{choice2} is the correct number!")
+                        print(f"\n{choice2} is the correct number! You took {c} guesses.")
                         break
                     elif choice2 > num:
                         print(f"\n{choice2} is too high.")
+                        c += 1
                     elif choice2 < num:
                         print(f"\n{choice2} is too low.")
+                        c += 1
                     
                 
             
